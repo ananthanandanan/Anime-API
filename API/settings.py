@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Anime', #installed app
     'graphene_django', #dependency 
+    'django_filters',
 ]
 
 GRAPHENE = {
-    "SCHEMA": "Anime.schema.schema" #register to project
+    'SCHEMA': 'Anime.schema.schema' #register to project
 }
 
 MIDDLEWARE = [
