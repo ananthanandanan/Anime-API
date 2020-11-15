@@ -2,25 +2,29 @@ from django.db import models
 
 # Create your models here.
 
-class ProductModel(models.Model):
-    """Model definition for ProductModel."""
+    
+class AnimeModel(models.Model):
+    """Model definition for AnimeModel."""
 
     # TODO: Define fields here
-    Segment = models.CharField(max_length = 100)
-    Country = models.CharField(max_length = 100)
-    Product = models.CharField(max_length = 100)
-    Units = models.IntegerField()
-    Sales = models.IntegerField()
-    Datesold = models.CharField(max_length = 100)
-    
+    Anime_id = models.IntegerField()
+    Name = models.CharField(max_length=200)
+    Genre = models.CharField(max_length=300)
+    Type = models.CharField(max_length=200)
+    Episode = models.IntegerField()
+    Rating = models.FloatField()
+    Members = models.IntegerField()
 
     class Meta:
-        """Meta definition for ProductModel."""
+        """Meta definition for AnimeModel."""
 
-        verbose_name = 'ProductModel'
-        verbose_name_plural = 'ProductModels'
+        verbose_name = 'AnimeModel'
+        verbose_name_plural = 'AnimeModels'
 
     def __str__(self):
-        """Unicode representation of ProductModel."""
+        """Unicode representation of AnimeModel."""
         
-        return self.Product
+        return self.Name
+
+    
+    
